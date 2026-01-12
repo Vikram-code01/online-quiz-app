@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Online Quiz App</title>
+  <meta charset="UTF-8">
+  <title>Simple Quiz App</title>
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Online Quiz App</h1>
-  <p>Click the button to start quiz</p>
+<div class="box" id="startBox">
+  <h2>Simple Quiz</h2>
+  <button type="button" onclick="startQuiz()">Start Quiz</button>
+</div>
 
-  <button id="startBtn" onclick="startQuiz()">Start Quiz</button>
+<div class="box" id="quizBox" style="display:none;">
+  <h3 id="question"></h3>
+  <div id="options"></div>
+  <button onclick="nextQuestion()">Next</button>
+</div>
 
-  <div id="result"></div>
+<div class="box" id="resultBox" style="display:none;">
+  <h2 id="result"></h2>
+  <button onclick="restartQuiz()">Restart</button>
+</div>
 
-  <script src="script.js"></script>
+<!-- JS LINK (ALWAYS LAST) -->
+<script src="script.js"></script>
 </body>
 </html>
